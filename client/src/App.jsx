@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { GoogleOAuthProvider } from '@react-oauth/google'
 import { useAuthStore } from './store'
 import { getToken, getAdminToken, clearToken } from './lib/auth'
 import { authAPI, configAPI } from './lib/api'
@@ -126,8 +127,10 @@ function AppInit() {
 }
 
 export default function App() {
+  const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID
+
   return (
-    <>
+    <GoogleOAuthProvider clientId={googleClientId}>
       <AppInit />
       <XpSnackbar />
       <PWAHandler />
@@ -168,6 +171,6 @@ export default function App() {
         {/* Catch all */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </>
+    </GoogleOAuthProvider>
   )
 }
