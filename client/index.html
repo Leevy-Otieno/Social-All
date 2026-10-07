@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="google-site-verification" content="OuB8lXM2xJF82xnP7uAi73MocSuXrXFFcs0KewccR2c" />
+  
+  <!-- Dynamic SEO Placeholders -->
+  <title>YouBGram — AI Developer Community</title>
+  <meta name="description" content="Join YouBGram, the premier social network for AI developers and model builders." />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="YouBGram — AI Developer Community" />
+  <meta property="og:description" content="Connect with fellow AI model builders and vibe coders." />
+  <meta property="og:image" content="/icon.png" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LM1Q5058SW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LM1Q5058SW');
+  </script>
+
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/png" href="/icon.png" />
+  <link rel="apple-touch-icon" href="/icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="YouBGram" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+</head>
+<body class="bg-white text-text-primary antialiased">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
